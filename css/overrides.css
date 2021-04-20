@@ -1,0 +1,18 @@
+
+
+.woocommerce div.product div.images.woocommerce-product-gallery
+{
+	margin-bottom: 0;
+	width: 30%;
+	border: 1px solid #ccc;
+}
+
+
+
+.woocommerce #content div.product div.summary,
+.woocommerce div.product div.summary,
+.woocommerce-page #content div.product div.summary,
+.woocommerce-page div.product div.summary
+{
+	width: 63%;
+}
