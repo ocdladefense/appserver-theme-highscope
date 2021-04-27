@@ -3,9 +3,6 @@
 
 class HighscopeTheme extends Theme {
 
-
-
-
 	protected $scripts = array(
 		array(
 			"src" => "https://code.jquery.com/jquery-3.4.1.slim.min.js",
@@ -52,19 +49,6 @@ class HighscopeTheme extends Theme {
 		array(
 			"src" => "/content/libraries/view/modal.js"
 		)
-		
-		
-		// $module_path = "/modules/webconsole";
-		/*
-		$scripts = array(
-			"$module_path/assets/lib/event.js",
-			"$module_path/assets/lib/datetime.js",
-			"$module_path/assets/lib/modal.js",
-			"$module_path/assets/lib/view.js",
-			"$module_path/assets/lib/Dom.js",
-			"$module_path/assets/lib/http/http.js",
-			"$module_path/assets/lib/http/HttpCache.js"
-		);*/
 	);
 
 
@@ -98,11 +82,6 @@ class HighscopeTheme extends Theme {
 			)
 		);
 	}
-
-
-
-
-
 
 	public function getThemeStyles() {
 	
@@ -144,6 +123,10 @@ class HighscopeTheme extends Theme {
 			array(
 				"active" => true,
 				"href" => $path . "/css/tables.css?bust=001"
+			),
+			array(
+				"active" => true,
+				"href" => $path . "/css/highscope.css?bust=001"
 			)
 		);
 	

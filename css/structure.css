@@ -80,7 +80,7 @@ footer .container {
 	text-align: left;
 	padding: 0px;
 	color: hsl(300,0%,47%);
-	height: 100vh;
+	min-height: 100vh;
 }
 
 
