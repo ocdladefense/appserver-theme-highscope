@@ -106,7 +106,7 @@
 	</head>
 
 	<body style="background-color: rgba(17,34,109,1.0); color: rgba(255,255,255,1.0);">
-		<div style="min-height: 100%; min-width: 100%; background-color: #fff;">
+		<div id="body-container">
 
 			<div id="header">
 				<div id="header-content" class="header-content">
@@ -154,14 +154,14 @@
 					
 					</div><!-- end float-right -->
 
-				</div>
+				</div><!-- end header-content -->
 				
 			</div> <!--end header-->
 		
 		
 		
 
-		 <div id="page">
+		<div id="page">
 
 			<div id="container">                      
 				<div class="container-content">
@@ -192,15 +192,23 @@
 				
 				</div> <!-- end container-content -->	
 			</div> <!--end container-->
-						
-			<div id="footer">
-				<div class="content">
-					<span style="font-size:smaller;">&copy;&nbsp;2020 OCDLA</span>
-				</div> <!--end content-->
-			</div> <!--end footer-->
 			
 		</div> <!--end page -->
 
+		
+		
+		<footer>
+			<div class="container">
+				&copy;&nbsp;2021 HighScope
+				<div class="footer">
+						<a href="terms"><?php echo(t("footer_terms"));?></a>&nbsp;
+						<a href="contact"><?php echo(t("footer_contact"));?></a>&nbsp;
+						<a href="policy"><?php echo(t("footer_policy"));?></a>&nbsp;
+						<a href="#"><?php echo(t("footer_store"));?></a>&nbsp;
+				</div>
+			</div>
+		</footer>
+		
 		
 		<div id="modal-backdrop">
 			<div id="modal">
@@ -213,7 +221,7 @@
 		</div>
 		
 		<div id="positioned-context-container"></div>
-
+		
 		<script type="text/javascript">	
 		
 			function fullscreen() {
@@ -221,15 +229,8 @@
 			}
 
 		</script>
-
+		
 		</div>
-		
-		
-		<footer>
-			<div class="container">
-			&copy;&nbsp;2021 HighScope
-			</div>
-		</footer>
 	</body>
 
 </html>

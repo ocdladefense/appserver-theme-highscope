@@ -126,6 +126,14 @@ class HighscopeTheme extends Theme {
 			),
 			array(
 				"active" => true,
+				"href" => $path . "/css/side-menu.css?bust=001"
+			),
+			array(
+				"active" => true,
+				"href" => $path . "/css/headings.css?bust=001"
+			),
+			array(
+				"active" => true,
 				"href" => $path . "/css/highscope.css?bust=001"
 			)
 		);
