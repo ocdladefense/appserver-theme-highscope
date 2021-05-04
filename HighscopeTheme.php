@@ -48,10 +48,11 @@ class HighscopeTheme extends Theme {
 		),
 		array(
 			"src" => "/content/libraries/view/modal.js"
+		),
+		array(
+			"src" => "/content/themes/highscope/js/sidebar.js"
 		)
 	);
-
-
 
 	
 	public function __construct() {
@@ -123,6 +124,14 @@ class HighscopeTheme extends Theme {
 			array(
 				"active" => true,
 				"href" => $path . "/css/tables.css?bust=001"
+			),
+			array(
+				"active" => true,
+				"href" => $path . "/css/side-menu.css?bust=001"
+			),
+			array(
+				"active" => true,
+				"href" => $path . "/css/headings.css?bust=001"
 			),
 			array(
 				"active" => true,
