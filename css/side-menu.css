@@ -1,23 +1,72 @@
-.sidenav {
+.sidenav{
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     height: 100%;
-    width: 14%;
-    position: relative;
     z-index: 1;
-    /*bottom: 214px;*/
     background-color: #012169;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    display: inline-block;
     text-align: left;
 
 }
 
-.sidenav a, .dropdown-btn {
+#menu    {
+	background: #012169;
+	color: white;
+	padding: 11px 15px;
+	/*border-radius: 25px;*/
+	box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+	transition: all ease-in-out 300ms;
+	left: 170px;
+}
+
+.sidenav-mobile-open{
+    width: 250px;
+    padding-top: 16px;
+    display: block;
+    position:fixed;
+
+}
+
+.sidenav-mobile-closed{
+    display: none;
+}
+
+.sidenav-desktop{
+    padding-top: 60px;
+    width:21%;
+    display:inline-block
+}
+
+.menu-open{
+
+}
+
+.menu-close{
+
+}
+
+.user{
+
+}
+
+.userPic{
+	font-size: 36pt;
+    float: left;
+    padding-top: 7px;
+    padding-right: 15px;
+}
+.userInfo{
+	float:left;
+	width: 100%;
+    color:#fff;
+    font-size: small;
+    padding-left: 16px;
+    padding-bottom: 20px;
+}
+
+.sidenav .sidebar-links a, .dropdown-btn {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 0.9rem;
+    /*font-size: 0.9rem;*/
     color: #fff;
     display: block;
     text-transform: uppercase;
@@ -27,13 +76,6 @@
 
 .sidenav a:hover {
     color: #00a8e7;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    font-size: 43px;
-    margin-left: 50px;
 }
 
 

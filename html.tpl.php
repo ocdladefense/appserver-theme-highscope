@@ -25,10 +25,6 @@
 		<link type="text/css" href="/pwa-install.css" rel="stylesheet" />
 		
 		<style type="text/css">
-	
-			.fullscreen #container-left {
-				display:none;
-			}
 
 			.fullscreen #stage {
 				width: 100% !important;
@@ -114,6 +110,7 @@
 						<a href="//highscope.org">
 							<img src="/content/images/logo-highscope.png" />
 						</a>
+						<span id="menu" style=" font-size:20pt; cursor:pointer" onclick="openNav('55%')">&#9776;</span>
 					</div>
 
 					<div id="banner">&nbsp;</div>
@@ -167,54 +164,49 @@
 				<div class="container-content">
 
 					<div id="container-left" class="column column-left">
-						<div id="menu-left">
-							<ul class="main-menu">
-								<li class="home-menu-item"><i class="fas fa-home fa-2x" aria-hidden="true"></i><a href="/home">home</a></li>
-								<li class="home-menu-item"><i class="fas fa-people-arrows fa-2x"></i><a href="/covid" title="How OCDLA is pivoting to meet COVID-19 challenges.">covid-19</a></li>
-								<li class="home-menu-item"><i class="fas fa-book-open"></i><a href="/user/documents" title="Read your publications">my publications</a></li>
-								<li class="home-menu-item"><i class="fas fa-calendar-day fa-2x" aria-hidden="true"></i><a href="/events">events</a></li>						
-								<li class="home-menu-item"><i class="fas fa-briefcase" aria-hidden="true"></i><a href="/jobs">jobs</a></li>						
-								<li class="home-menu-item"><i class="fas fa-database fa-2x" aria-hidden="true"></i><a href="/cars">case reviews</a></li>						
-								<li class="home-menu-item"><i class="fas fa-map-pin fa-2x" aria-hidden="true"></i><a href="/maps">maps</a></li>							
-								<li class="home-menu-item"><i class="fas fa-video fa-2x" aria-hidden="true"></i><a href="/videos">videos</a></li>						
-								<li class="home-menu-item"><i class="fas fa-user-friends fa-2x" aria-hidden="true"></i><a href="/directory">members/experts</a></li>						
-								<li class="home-menu-item"><i class="fas fa-comment-dots fa-2x" aria-hidden="true"></i><a href="/feedback">feedback</a></li>							
-								<li class="home-menu-item"><i class="fas fa-mobile-alt fa-2x" aria-hidden="true"></i><a href="/contact">contact us</a></li>
-							</ul>
+						<div class="sidenav">
+							<div id="title">LETTER<br/>LINKS</div>
+							<div class="user">
+								<div class="userInfo">
+									<i class="fa fa-user userPic"></i>
+									<?php echo("FirstName"); ?>
+									<?php echo(" LastName"); ?></br>
+									Username: <?php echo(" Test1"); ?>
+									<a href="#"><br/><i class="fa fa-cog" aria-hidden="true"></i>Options</a>
+									
+								</div>
+								
+							</div>
+							<div class="sidebar-links">
+								<a href="/my-account">Class List</a>
+								<a href="/letterlinks/login">Login</a>
+								<a href="/letterlinks/content/about"><?php echo(t("menu_about"));?></a>
+								<a href="/letterlinks/content/faq"><?php echo(t("menu_faq"));?></a>
+								<a href="/letterlinks/content/help"><?php echo(t("menu_help"));?></a>
+								<a href="/letterlinks/content/resources"><?php echo(t("menu_resources"));?></a>
+								<a href="/letterlinks/content/activities"><?php echo(t("menu_activities"));?></a>
+								<button class="dropdown-btn"><i class="fa fa-language"></i>
+									<i class="fa fa-caret-down"></i>&nbsp;&nbsp;
+								</button>
+								<div class="dropdown-container">
+									<?php
+										echo('<a href="'.$page.'?lang=en">'."en"."</a>");
+										echo('<a href="'.$page.'?lang=es">'."es"."</a>");
+									?>
+								</div>
+							</div>
 						</div>
 					</div>
 
 
 				
 					<div id="stage" class="column column-middle">
-						<span id="openbtn" style=" display:none; font-size:20pt; cursor:pointer" onclick="openNav('40%')">&#9776;</span>
-						<div id="mySidenav" class="sidenav">
-							<div id="title">LETTER<br/>LINKS</div>
-							<a href="/my-account"> 
-								<i class="fa fa-user"></i>
-								<div id="user-info"><?php echo("FirstName LastName"); ?>
-								</div>
-							</a>
-							<a href="/letterlinks/login">Login</a>
-							<a href="/letterlinks/content/about"><?php echo(t("menu_about"));?></a>
-							<a href="/letterlinks/content/faq"><?php echo(t("menu_faq"));?></a>
-							<a href="/letterlinks/content/help"><?php echo(t("menu_help"));?></a>
-							<a href="/letterlinks/content/resources"><?php echo(t("menu_resources"));?></a>
-							<a href="/letterlinks/content/activities"><?php echo(t("menu_activities"));?></a>
-							<button class="dropdown-btn"><i class="fa fa-language"></i>
-								<i class="fa fa-caret-down"></i>&nbsp;&nbsp;
-							</button>
-							<div class="dropdown-container">
-								<?php
-									echo('<a href="'.$page.'?lang=en">'."en"."</a>");
-									echo('<a href="'.$page.'?lang=es">'."es"."</a>");
-								?>
-							</div>
-						</div>
+						
+
 						<div id="stage-content">
 							<?php echo $content; ?>
 						</div>
-					</div>
+					
 				
 				</div> <!-- end container-content -->	
 			</div> <!--end container-->
