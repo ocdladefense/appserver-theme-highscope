@@ -48,10 +48,11 @@ class HighscopeTheme extends Theme {
 		),
 		array(
 			"src" => "/content/libraries/view/modal.js"
+		),
+		array(
+			"src" => "/content/themes/highscope/js/sidebar.js"
 		)
 	);
-
-
 
 	
 	public function __construct() {
