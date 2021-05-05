@@ -107,7 +107,7 @@
 			<div id="header">
 				<div id="header-content" class="header-content">
 					<div id="logo">
-						<a href="//highscope.org">
+						<a href="//highscope.org" style="text-decoration: none;">
 							<img src="/content/images/logo-highscope.png" />
 						</a>
 						<span id="menu" style=" font-size:20pt; cursor:pointer" onclick="openNav('55%')">&#9776;</span>
