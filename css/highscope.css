@@ -132,8 +132,6 @@ ul {
 		padding-top:16px;
 		position:fixed;
 		transition: width 0.5s;
-		width:0%;
-		display: block;
 		top: 75px;
 	}
 }
