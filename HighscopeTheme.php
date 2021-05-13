@@ -1,5 +1,5 @@
 <?php
-
+use function LetterLinks\current_user;
 
 class HighscopeTheme extends Theme {
 
@@ -79,7 +79,8 @@ class HighscopeTheme extends Theme {
 		return $template->render(array(
 			"content" => $content,
 			"scripts" => self::pageScripts($this->scripts),
-			"styles" => self::pageStyles($this->styles)
+			"styles" => self::pageStyles($this->styles),
+			"user" => current_user()
 			)
 		);
 	}

@@ -166,20 +166,27 @@
 					<div id="container-left" class="column column-left">
 						<div class="sidenav">
 							<div id="title">LETTER<br/>LINKS</div>
+
+							<?php if(!empty($user)): ?>
 							<div class="user">
 								<div class="userInfo">
 									<i class="fa fa-user userPic"></i>
-									<?php echo("FirstName"); ?>
-									<?php echo(" LastName"); ?></br>
-									Username: <?php echo(" Test1"); ?>
-									<a href="#"><br/><i class="fa fa-cog" aria-hidden="true"></i>Options</a>
+									<?php echo($user->name); ?></br>
+									Username: <?php echo($user->shortUsername); ?>
+									<a href="letterlinks/user" style="text-decoration: none; color:#00a8e7"><br/><i class="fa fa-cog" aria-hidden="true"></i>Options</a>
 									
 								</div>
 								
 							</div>
+							<?php endif; ?>
 							<div class="sidebar-links">
 								<a href="/my-account">Class List</a>
-								<a href="/letterlinks/login">Login</a>
+								<?php if(!empty($user)): ?>
+									<a href="/letterlinks/logout">Logout</a>
+								<?php else: ?>
+									<a href="/letterlinks/login">Login</a>
+								<?php endif; ?>
+								
 								<a href="/letterlinks/content/about"><?php echo(t("menu_about"));?></a>
 								<a href="/letterlinks/content/faq"><?php echo(t("menu_faq"));?></a>
 								<a href="/letterlinks/content/help"><?php echo(t("menu_help"));?></a>
