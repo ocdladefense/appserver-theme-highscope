@@ -172,7 +172,7 @@
 								<div class="userInfo">
 									<i class="fa fa-user userPic"></i>
 									<?php echo($user->name); ?></br>
-									Username: <?php echo($user->shortUsername); ?>
+									<?php echo($user->shortUsername); ?>
 									<a href="letterlinks/user" style="text-decoration: none; color:#00a8e7"><br/><i class="fa fa-cog" aria-hidden="true"></i>Options</a>
 									
 								</div>
