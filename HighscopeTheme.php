@@ -1,5 +1,4 @@
 <?php
-use function LetterLinks\current_user;
 
 class HighscopeTheme extends Theme {
 
@@ -67,7 +66,12 @@ class HighscopeTheme extends Theme {
 		$this->content = $content;
 	}
 
-
+	public function current_user($returnResponse = false){
+		$connectedApp = "letter-links";
+		$flow = "webserver";//set globally
+		//$_SESSION["connecte"][$flow]["user"];
+		return \User::getUserFromSession($connectedApp,$flow);
+	}
 
 	/**
 	 * Load a template by name; also a shortcut to get the scripts/styles, too.
@@ -76,11 +80,13 @@ class HighscopeTheme extends Theme {
 
 		$template = new Template("html");
 
+		$user = current_user() ?? null;
+
 		return $template->render(array(
 			"content" => $content,
 			"scripts" => self::pageScripts($this->scripts),
 			"styles" => self::pageStyles($this->styles),
-			"user" => current_user()
+			"user" => $user
 			)
 		);
 	}
