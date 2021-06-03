@@ -1,20 +1,23 @@
 
 function openNav() {
-    document.getElementById("container-left").classList.add("sidenav-mobile-open");
+    document.getElementById("sidenav").classList.add("sidenav-mobile-open");
     menu.innerHTML = "&times;";
+    menu.style.fontSize = "xx-large" ;
     document.getElementById("menu").onclick = closeNav;  
     
   }
   
   function closeNav() {
-    document.getElementById("container-left").classList.remove("sidenav-mobile-open");
+    document.getElementById("sidenav").classList.remove("sidenav-mobile-open");
     menu.innerHTML = "&#9776;";
+    menu.style.fontSize = "20pt" ;
     document.getElementById("menu").onclick = openNav; 
+    
   }
 
   window.addEventListener("resize",() =>{
     if(document.body.clientWidth > 800){
-      document.getElementById("container-left").classList.remove("sidenav-mobile-open");
+      document.getElementById("sidenav").classList.remove("sidenav-mobile-open");
       menu.innerHTML = "&#9776;";
       document.getElementById("menu").onclick = openNav; 
     }
@@ -23,7 +26,28 @@ function openNav() {
     // }
   });
 
+  function addMobileMenuBtn(elementName,isCssClass){
 
+    isCssClass = isCssClass != true ? false : true;
+    elementName = elementName == null || elementName == "" ? "mobile-menu-btn": elementName;
+
+    let parent;
+    let mobileMenuBtn = document.createElement('span');
+    mobileMenuBtn.id = "menu";
+    mobileMenuBtn.innerHTML = "&#9776;";
+    mobileMenuBtn.onclick = function() {openNav('55%');};
+
+
+    if(isCssClass){
+      parent = document.getElementsByClassName(elementName)[0];
+    }
+    else{
+      parent = document.getElementById(elementName);
+    }
+    parent.appendChild(mobileMenuBtn);
+    parent.style.display = "inline-block";
+      
+  }
 
 
 
@@ -34,6 +58,8 @@ function openNav() {
 
 
   window.onload = function(){
+    addMobileMenuBtn();
+
     var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
     

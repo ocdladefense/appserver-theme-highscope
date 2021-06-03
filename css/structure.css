@@ -35,23 +35,6 @@
 	text-align:left;
 }
 
-#container-left {
-	/* overflow-y: scroll; This causes an issue when all menu items are visible it still makes space for the scrollbar. */
-}
-
-
-/*
-#menu-left {
-	display:inline-block;
-	min-height:100vh;
-	vertical-align:top;
-	padding-left: 11%;
-	padding-right: 11%;
-	padding-top: 6%;
-	font-size:0.8rem;
-}
-*/
-
 
 
 
@@ -72,12 +55,6 @@ footer {
 
 footer .container {
 	padding: 25px;
-}
-
-
-#btnAdd {
-	max-width: 10vh;
-	cursor: pointer;
 }
 
 
